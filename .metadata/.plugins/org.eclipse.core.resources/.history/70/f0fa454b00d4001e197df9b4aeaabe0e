@@ -1,0 +1,8 @@
+
+public class StoreApp {
+	
+	//main method for all the functioning of the program
+	public static void main(String[] args) {
+		
+	}
+}

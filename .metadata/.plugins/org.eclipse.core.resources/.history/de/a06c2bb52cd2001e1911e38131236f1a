@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StoreController {
+	
+	//method for the addition of new product
+	public static void addNewProduct() {
+		ArrayList<SmartphoneInventoryModel> smartphone = new ArrayList<SmartphoneInventoryModel>();
+		
+		Scanner scanner =  new Scanner(System.in);		//Creating a scanner to take input from user
+		
+		System.out.println("Enter the model code: ");
+		int modelCode = scanner.nextInt();	//takes input of modelCode
+		
+		//checking if model code already exists
+		for (SmartphoneInventoryModel phoneInventory: smartphone) {
+			//checking if the model code already exists
+			if(phoneInventory.getModelCode() == modelCode) {
+				System.out.println("The model code" + modelCode + " already exists");
+			}
+		}
+	}
+}
+

@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+public class StoreApp {
+	
+	//main method for all the functioning of the program
+	public static void main(String[] args) {
+		
+		//creating array list
+		ArrayList<SmartphoneInventoryModel> smartPhone = new ArrayList<SmartphoneInventoryModel>();
+		Scanner scanner = new Scanner(System.in);
+		int choice;
+		
+		//choices for the user
+		System.out.println("1. Add Product");
+		System.out.println("2. Update Product");
+		System.out.println("3. View Product");
+		System.out.println("4. Delete Product");
+		System.out.println("5. Exit");
+		
+		System.out.println("Choose the option:");
+		choice = Scanner.nextInt();
+		
+	}
+}
