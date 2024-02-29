@@ -43,6 +43,7 @@ public class StoreApp {
 					
 				case 5:
 					System.out.println("System Closed!!! Thank you!!!");
+					break;
 					
 				default:
 					System.out.println("Invalid choice please select a valid option!!!");
