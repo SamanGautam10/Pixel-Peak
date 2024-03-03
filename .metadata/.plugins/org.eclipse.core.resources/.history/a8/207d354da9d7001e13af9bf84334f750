@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Registration Form</h1>
+	<form action='../java/MyFirstServlet' method='post'>
+		User Name: <input id='username' type='text' name='username'> 
+		User Age: <input id='age' type='text' name='userage'>
+		<input type="submit" value ="Register">
+	</form>
+</body>
+</html>

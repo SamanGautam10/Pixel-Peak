@@ -1,0 +1,16 @@
+127.0.0.1 - - [02/Mar/2024:20:27:09 +0545] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:27:09 +0545] "GET /MyProject/pages/register.html HTTP/1.1" 200 383
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:27:10 +0545] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:27:15 +0545] "POST /MyProject/MyFirstServlet HTTP/1.1" 200 51
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:27:20 +0545] "POST /MyProject/MyFirstServlet HTTP/1.1" 200 51
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:27:49 +0545] "POST /MyProject/MyFirstServlet HTTP/1.1" 200 41
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:29:16 +0545] "POST /MyProject/MyFirstServlet HTTP/1.1" 500 1498
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:29:18 +0545] "POST /MyProject/MyFirstServlet HTTP/1.1" 500 1498
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:29:47 +0545] "POST /MyProject/MyFirstServlet HTTP/1.1" 200 41
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:40:40 +0545] "POST /MyProject/MyFirstServlet HTTP/1.1" 500 1270
+127.0.0.1 - - [02/Mar/2024:20:40:52 +0545] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:40:52 +0545] "GET /MyProject/MyFirstServlet HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:40:55 +0545] "GET /MyProject/MyFirstServlet HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:40:56 +0545] "GET /MyProject/MyFirstServlet HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:40:56 +0545] "GET /MyProject/MyFirstServlet HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Mar/2024:20:41:06 +0545] "POST /MyProject/MyFirstServlet HTTP/1.1" 500 1270

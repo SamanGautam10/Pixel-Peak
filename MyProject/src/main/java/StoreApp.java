@@ -42,6 +42,7 @@ public class StoreApp {
 					break;
 					
 				case 5:
+					System.exit(0);
 					System.out.println("System Closed!!! Thank you!!!");
 					break;
 					

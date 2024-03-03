@@ -18,6 +18,7 @@ public class StoreController {
 			if(phoneInventory.getModelCode() == modelCode) {
 				System.out.println("The model code" + modelCode + " already exists");
 			}
+		}
 		
 		//taking inputs from the user
 		System.out.println("Enter name of the phone: ");
@@ -40,7 +41,7 @@ public class StoreController {
 		
 		//adding the created object in the array list
 		smartPhone.add(phoneInformation);
-		}
+		System.exit(0);
 	}
 	
 	//method to delete existing phone's information

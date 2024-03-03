@@ -1,3 +1,6 @@
 127.0.0.1 - - [29/Feb/2024:12:34:56 +0545] "GET / HTTP/1.1" 404 751
 0:0:0:0:0:0:0:1 - - [29/Feb/2024:12:34:58 +0545] "GET /MyProject/MyFirstServlet HTTP/1.1" 200 10
 0:0:0:0:0:0:0:1 - - [29/Feb/2024:12:34:59 +0545] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [29/Feb/2024:20:35:53 +0545] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [29/Feb/2024:20:35:54 +0545] "GET /MyProject/WEB-INF/classes/StoreController.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [29/Feb/2024:20:35:54 +0545] "GET /favicon.ico HTTP/1.1" 404 762
