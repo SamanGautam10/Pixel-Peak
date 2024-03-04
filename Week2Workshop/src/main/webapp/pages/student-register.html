@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Week-2 Workshop</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <style></style>
+    <body id="grad">
+        <div class="wholeform">
+            <div class="insideform">
+                <form action="" metho="post">
+                    <h1 class="heading1">Registration Form</h1>
+                    <div class="items">
+                        <div class="name">
+                            <label for="FirstName">First Name</label>
+                            <input type="text" name="firstname" class="labelbox">
+                            <label for="LastName">Last Name</label>
+                            <input type="text" name="lastname" class="labelbox">
+                        </div>
+                        <div class="birthday-gender">
+                            <label for="birthday">Birthday</label>
+                            <input type="date" class="labelbox">
+                            <!--Gender Selection-->
+                            <label for="gender">Gender</label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                class="genderSelection"
+                                value="Male"
+                            >
+                            <label for="male">Male</label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                class="genderSelection"
+                                value="female"
+                            >
+                            <label for="female">Female</label>
+                            <br>
+                            <br>
+                        </div>
+                        <!--Information about the student-->
+                        <div class="information">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                class="labelbox"
+                                placeholder="example@gmail.com"
+                            >
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="number" name="phonenumber" class="labelbox">
+                        </div>
+                        <!--Subject Selection-->
+                        <div class="subjectSelection">
+                            <label for="subject">Subjects</label>
+                            <select name="subjects" id="subject-selection" class="labelbox">
+                                <option
+                                    value="hiddenoption"
+                                    disabled
+                                    selected
+                                    hidden
+                                >Select your option</option>
+                                <option value="programming">Advanced Programming</option>
+                                <option value="software">Software Engineering</option>
+                                <option value="data">Smart Data Discovery</option>
+                            </select>
+                        </div>
+                    </div>
+                    <input type="Submit" value="Submit" id="submitButton">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

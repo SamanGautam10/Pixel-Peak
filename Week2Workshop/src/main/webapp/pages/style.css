@@ -1,0 +1,66 @@
+@charset "ISO-8859-1";
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(to bottom left, rgb(79, 0, 163) 0%, rgb(173, 10, 192) 35%, rgb(188, 76, 188) 100%);  
+}
+
+.heading1{
+    font-family: 'sans-serif', Helvetica, Arial, sans-serif;
+    font-weight: 80;
+}
+
+.wholeform{
+    margin: 60px auto;
+    /* text-align: center; */
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.insideform{
+    margin: 30px 55px;
+    text-align: left;
+}
+
+.items{
+    font-family: 'sans-serif', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.name{
+    margin-bottom: 30px;
+}
+
+.birthday-gender{
+    margin-bottom: 10px;
+}
+
+.subjectSelection{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#submitButton{
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: rgb(47, 128, 227);
+    color: white;
+    font-size: 16px;
+}
+
+.labelbox{
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 200px; 
+    height: 25px; 
+    background-color: rgb(211, 211, 211);
+}
