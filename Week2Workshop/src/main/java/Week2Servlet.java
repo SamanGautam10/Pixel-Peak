@@ -45,7 +45,7 @@ public class Week2Servlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter printOut = response.getWriter();
 
-		String firstname = request.getParameter("firstname");
+		String firstname = request.getParameter("FirstName");
 		String lastname = request.getParameter("lastname");
 		String email = request.getParameter("email");
 		int phoneNumber = Integer.parseInt(request.getParameter("phoneNumber"));
@@ -59,7 +59,7 @@ public class Week2Servlet extends HttpServlet {
 			String pass = "";
 			Connection con = DriverManager.getConnection(url, user, pass);
 			
-			String query = "Insert into workshop2 (firstname, lastname, email, phoneNumber, subject) values (?,?,?,?,?)";
+			String query = "Insert into workshop2 (firstname,lastname,email,phoneNumber,subject) values (?,?,?,?,?)";
 			PreparedStatement st = con.prepareStatement(query);
 			
 			st.setString(1, firstname);
@@ -70,12 +70,12 @@ public class Week2Servlet extends HttpServlet {
 			
 			st.executeUpdate(); 
 			
-			PrintWriter out = response.getWriter();
-			out.println("<h1>Your account has been registered!!!</h1>");
-			out.println("<h3>Name:" + firstname + " " + lastname + "</h3>");
-			out.println("<h3>Email: " + email + "</h3>");
-			out.println("<h3>Phone Number: " + phoneNumber + "</h3>");
-			out.println("<h3>Subject: " + subject + "</h3>");
+//			PrintWriter out = response.getWriter();
+//			out.println("<h1>Your account has been registered!!!</h1>");
+//			out.println("<h3>Name:" + firstname + " " + lastname + "</h3>");
+//			out.println("<h3>Email: " + email + "</h3>");
+//			out.println("<h3>Phone Number: " + phoneNumber + "</h3>");
+//			out.println("<h3>Subject: " + subject + "</h3>");
 			
 			int result = st.executeUpdate();
 			

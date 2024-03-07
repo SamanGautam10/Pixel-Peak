@@ -9,14 +9,14 @@
     <body id="grad">
         <div class="wholeform">
             <div class="insideform">
-                <form action="../Week2Servlet" method="post">
+                <form action="/Week2Servlet" method="post">
                     <h1 class="heading1">Registration Form</h1>
                     <div class="items">
                         <div class="name">
                             <label for="FirstName">First Name</label>
-                            <input type="text" name="firstname" class="labelbox">
+                            <input type="text" id="firstname" name="firstname" class="labelbox">
                             <label for="LastName">Last Name</label>
-                            <input type="text" name="lastname" class="labelbox">
+                            <input type="text" id="lastname" name="lastname" class="labelbox">
                         </div>
                         <div class="birthday-gender">
                             <label for="birthday">Birthday</label>
@@ -40,6 +40,7 @@
                             <br>
                             <br>
                         </div>
+                        
                         <!--Information about the student-->
                         <div class="information">
                             <label for="email">Email</label>
@@ -47,15 +48,16 @@
                                 type="email"
                                 name="email"
                                 class="labelbox"
+                                id="email"
                                 placeholder="example@gmail.com"
                             >
                             <label for="phoneNumber">Phone Number</label>
-                            <input type="number" name="phonenumber" class="labelbox">
+                            <input type="number" name="phonenumber" id="phoneNumber" class="labelbox">
                         </div>
                         <!--Subject Selection-->
                         <div class="subjectSelection">
                             <label for="subject">Subjects</label>
-                            <select name="subjects" id="subject-selection" class="labelbox">
+                            <select name="subjects" id="subject-selection" class="labelbox" id="subject">
                                 <option
                                     value="hiddenoption"
                                     disabled
