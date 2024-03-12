@@ -63,10 +63,13 @@ public class RegisterServlet extends HttpServlet {
 		int result = dbController.addStudent(studentModel);
 		
 		if(result > 0) {
-			response.sendRedirect(request.getContextPath() + "/pages/login.html");
+			response.sendRedirect(request.getContextPath() + "/pages/welcome.html");
 		}
 		else {
-			//pass
+			PrintWriter out = response.getWriter();
+	        out.println("<html><body>");
+	        out.println("<h3>Error: Data insertion failed</h3>");
+	        out.println("</body></html>");
 		}
 	}
 

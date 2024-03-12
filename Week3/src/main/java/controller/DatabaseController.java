@@ -21,10 +21,9 @@ public class DatabaseController {
 	}
 	
 	public int addStudent(StudentModel studentModel) {
-		String INSERT_STUDENT = "INSERT INTO student_info" + "(first_name, last_name, birthday, gender, email, "
-				+ "number, subject, user_name, password)" + "VALUES (?,?,?,?,?,?,?,?,?)";
+		String query = "INSERT INTO student_info" + "(first_name, last_name, birthday, gender, email, number, subject, user_name, password) VALUES (?,?,?,?,?,?,?,?,?)";
 		try(Connection con = getConnection()){
-			PreparedStatement st = con.prepareStatement(INSERT_STUDENT);
+			PreparedStatement st = con.prepareStatement(query);
 			
 			st.setString(1, studentModel.getFirstName());
 			st.setString(2, studentModel.getLastName());
@@ -34,7 +33,7 @@ public class DatabaseController {
 			st.setString(6, studentModel.getPhoneNumber());
 			st.setString(7, studentModel.getSubject());
 			st.setString(8, studentModel.getUsername());
-			st.setString(10, studentModel.getPassword());
+			st.setString(9, studentModel.getPassword());
 			
 			int result = st.executeUpdate();
 			return result > 0 ? 1:0;
