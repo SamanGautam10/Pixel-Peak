@@ -13,7 +13,7 @@ import controller.DatabaseController;
  * Servlet implementation class LoginServlet
  */
 @WebServlet(asyncSupported = true, urlPatterns = { "/LoginServlet" })
-public class LoginServlet extends HttpServlet {
+public class login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	DatabaseController dbController = new DatabaseController();
@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginServlet() {
+    public login() {
         super();
         // TODO Auto-generated constructor stub
     }

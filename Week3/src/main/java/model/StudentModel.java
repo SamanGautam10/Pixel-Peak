@@ -1,8 +1,20 @@
+/**
+ * THis Servlet class handles student registration requests. It extracts student information from the registration form submission,
+ * performs basic data validation(to be implemented), and attempts to register the student in the database using a 'DBController'
+ */
+
+
+
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class StudentModel {
+public class StudentModel implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String firstName;
 	private String lastName;
 	private LocalDate dob;

@@ -1,6 +1,8 @@
 package controller.servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,25 +17,32 @@ import controller.DatabaseController;
 @WebServlet(asyncSupported = true, urlPatterns = { "/LoginControl" })
 public class LoginControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+//	private final DatabaseController dbController;
 	DatabaseController dbController = new DatabaseController();
     /**
      * @see HttpServlet#HttpServlet()
      */
     public LoginControl() {
-        super();
+        this.dbController = new DatabaseController();
         // TODO Auto-generated constructor stub
     }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String user_name = request.getParameter("username");
-		String password = request.getParameter("password");
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter printOut = response.getWriter();
+		
+		String user_name = request.getParameter("getUsername");
+		String password = request.getParameter("getPassword");
+		
 		
 		int loginResult = dbController.getStudentLoginInfo(user_name, password);
+		printOut.println("<h3>Login Successfull</h3>");
 		
 		if(loginResult == 1) {
+			PrintWriter systemOut = response.getWriter();
+			systemOut.println("<h3>Login Successfull second</h3>");
 			//successful login
 			response.sendRedirect(request.getContextPath() + "/pages/welcome.html");
 		}
@@ -43,14 +52,6 @@ public class LoginControl extends HttpServlet {
 		else {
 			//pass
 		}
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }
