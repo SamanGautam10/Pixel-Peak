@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="MyProject" path="/MyProject" reloadable="true" source="org.eclipse.jst.jee.server:MyProject"/><Context docBase="Week2Workshop" path="/Week2Workshop" reloadable="true" source="org.eclipse.jst.jee.server:Week2Workshop"/><Context docBase="Week3" path="/Week3" reloadable="true" source="org.eclipse.jst.jee.server:Week3"/><Context docBase="CameraWebsite" path="/CameraWebsite" reloadable="true" source="org.eclipse.jst.jee.server:CameraWebsite"/></Host>
+      <Context docBase="MyProject" path="/MyProject" reloadable="true" source="org.eclipse.jst.jee.server:MyProject"/><Context docBase="Week2Workshop" path="/Week2Workshop" reloadable="true" source="org.eclipse.jst.jee.server:Week2Workshop"/><Context docBase="Week3" path="/Week3" reloadable="true" source="org.eclipse.jst.jee.server:Week3"/><Context docBase="CameraWebsite" path="/CameraWebsite" reloadable="true" source="org.eclipse.jst.jee.server:CameraWebsite"/><Context docBase="website" path="/website" reloadable="true" source="org.eclipse.jst.jee.server:website"/></Host>
     </Engine>
   </Service>
 </Server>

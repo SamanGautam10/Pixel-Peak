@@ -1,0 +1,272 @@
+@charset "ISO-8859-1";
+
+body{
+    background-color: rgb(245, 245, 245);
+    height: auto;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.sidebar {
+    display: inline-block;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #3c3c3c;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 45px 0;
+    text-align: center;
+    font-family: 'Varela Round', Tahoma;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #009cff;
+    transition: 0.7s;
+}
+
+/* Logo on the navigation bar */
+.nav-img{
+    margin-left: 20px;
+}
+
+
+/* navigation bar of top */
+.search{
+    background-color: rgb(225, 225, 225);
+    display: flex;
+    margin: 0 0 0 385px;
+    height: 70px;
+    width: 67%;
+    border-radius: 9px;
+}
+
+.search-row{
+    display: inline;
+}
+
+.search .search-bar-column{
+    margin: auto 45px;
+}
+
+/* navigation-searchbar design */
+.search .searchbar{
+    border: 0px;
+    border-radius: 5px;
+    height: 30px;
+    font-family: 'Varela Round', Tahoma;
+    font-size: 15px;
+    padding-left: 20px;
+    color: #848383;
+    background-color: rgb(245, 245, 245);
+}
+
+
+.profile{
+    display: inline;
+    margin-left: 470px;
+}
+
+.profile a{
+    text-decoration: none;
+    color: #1d1c1c;
+}
+
+/* image of the profile */
+.profile .profile-img{
+    display: inline;
+    vertical-align: middle;
+    height: 50px;
+    width: 50px;
+}
+
+/* effects of profile on hover */
+.profile .profile-img:hover{
+    cursor: pointer;
+}
+
+.profile .profile-text{
+    margin-left: 10px;
+    font-family: 'Varela Round', Tahoma;
+}
+
+.profile .profile-text:hover{
+    color: #009cff;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.span-welcome{
+    margin: 40px 0 0 390px;
+    font-family: 'Varela Round', Tahoma;
+    font-size: 17px;
+}
+
+/* dashboard stats card */
+* {
+    box-sizing: border-box;
+    /* scrollbar-width: none; */
+}
+
+/* Card for the stats of the website */
+.card-row{
+    display: flex; 
+    flex-wrap: wrap;
+    position: relative;
+    top: 30px;
+    left: 330px;
+    margin: 0 0 0 50px
+}
+
+.card-row .column-card {
+    float: left;
+    width: 34%;
+    background-color: rgb(225, 225, 225);
+    border: 1px solid rgb(41, 41, 41);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.card {
+    height: 280px;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+.card p{
+    font-family: 'Varela Round', Tahoma;
+    font-size: 20px;
+}
+
+.column-card .card img{
+    height: 200px;
+}
+/* Upto here this is the design for stats */
+
+/* design for message from user here */
+.card-row .message-user{
+    background-color: rgb(225, 225, 225);
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    top: 80px;
+    width: 68%;
+}
+
+
+/* productmanagement.html designing from this line */
+
+/* section of view product */
+.management{
+    display: flex; 
+    flex-wrap: wrap;
+    position: relative;
+    top: 30px;
+    left: 333px;
+    margin: 0 0 0 50px;
+    background-color: rgb(225, 225, 225);
+    width: 65%;
+    border-radius: 5px;
+}
+
+.heading-one{
+    font-family: 'Varela Round', Tahoma;
+    font-size: 30px;
+    margin: 20px auto;
+}
+
+/* section of add product */
+.add-product{
+    display: flex;
+    position: relative;
+    top: 30px;
+    left: 383px;
+    margin-bottom: 32px;
+    margin-top: 10px;
+}
+
+.add-product h1{
+    display: inline;
+    margin-left: 5px;
+    position: relative;
+    vertical-align: middle;
+    font-family: 'Varela Round', Tahoma;
+    text-decoration: none;
+    color: #1d1c1c;
+}
+
+.add-product h1:hover{
+    color: #4b4b4b;
+}
+
+/* product management buttons */
+.btn-management{
+    height: 35px;
+    width: 70px;
+    margin-left: 30px;
+    background-color: rgb(184, 184, 184);
+    font-family: 'Varela Round', Tahoma;
+    font-size: 17px;
+    color: #1d1c1c;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.btn-management:hover{
+    cursor: pointer;
+    background-color: #3c3c3c;
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+/* form to control products */
+.form-row{
+    display: flex; 
+    flex-wrap: wrap;
+    width: 67%;
+    background-color: white;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+    top: 40px;
+    left: 385px;
+    justify-content: center;
+    
+}
+
+.form-column{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-family: 'Varela Round', Tahoma;
+    padding: 10px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.form-column input[type="text"]{
+    width: 100%; 
+    padding: 10px; 
+    margin: 5px 0; 
+    border: 1px solid #949494; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}

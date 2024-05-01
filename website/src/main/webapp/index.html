@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Login Panel</title>
+    </head>
+    <style>
+        body{
+            /* background: linear-gradient(to top right, #050505, #201e1e); */
+            background-color: black;
+            overflow: hidden;
+            margin: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="stylesheets/loginpanel.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <body>
+        <!-- login login form page's photo -->
+        <div class="form-column">
+            <div class="form-row">
+                <img src="resources/login-bg.jpg" alt="" height="730" width="770" class="img-login-login">
+            </div>
+
+            <!-- login login panel -->
+            <div class="form-row">
+                <div class="form-box">
+                    <form action="#">
+                        <!-- credential box in the form -->
+                        <div class="login-panel-sentence">Pixels Peak</div>
+                        
+                        <div class="form-box-row">
+                            <input type="text" name="login-username" placeholder="Username/Email" class="login-textbox">
+                        </div>
+                        
+                        <div class="form-box-row">
+                            <input type="password" name="login-password" placeholder="Password" class="login-textbox">
+                        </div>
+
+                        <!-- Remeber me and Register Account Section -->
+                        <div class="form-box-row">
+                            <input type="checkbox" name="remember-me" class="remember-me-box">
+                            <label for="remember-me">Remember Me</label>
+
+                            <a href="#" class="register-account">Register Account</a>
+                        </div>
+                        <div class="form-box-row">
+                            <input type="submit" class="login-submit-button" value="Login">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+

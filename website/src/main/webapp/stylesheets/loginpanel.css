@@ -1,0 +1,100 @@
+@charset "ISO-8859-1";
+/* Giving equal space to the containers using flex */
+.form-column{
+    display: flex;
+    height: 100%;
+}
+
+.form-column .form-row {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+/* giving size to the login form */
+.form-box{
+    width: 60%;
+    margin: 170px auto;
+}
+
+/* Credentials for login */
+.login-textbox {
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #dadada;
+    margin: 15px auto;
+    border-radius: 10px;
+    height: 30px;
+    font-family: 'Varela Round', Tahoma;
+    font-size: 20px;
+}
+
+.login-textbox:hover{
+    border: 1px solid rgb(33, 118, 188);
+    transition: 180ms;
+}
+
+/* giving gap for text inside place holder of login panel */
+.login-textbox::placeholder{
+    padding-left: 20px;
+}
+
+/* Remember me check box design */
+.form-box-row .remember-me-box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* remember me text for panel login */
+.remember-me-box +label{
+    font-family: 'Varela Round', Tahoma;
+    font-size: 17px;
+    color: rgb(232, 232, 232);
+}
+
+/* designing checkbox of remember me */
+
+  /* text written in login panel */
+.login-panel-sentence{
+    text-align: center;
+    padding-bottom: 40px;
+    font-family: 'Varela Round', Tahoma;
+    font-size: 40px;
+    color: rgb(219, 219, 219);
+}
+
+/* Register account of login page */
+.form-box-row .register-account{
+    text-decoration: none;
+    color: rgb(232, 232, 232);
+    font-size: 17px;
+    margin-left: 172px;
+    font-family: 'Varela Round', Tahoma;
+}
+
+/* hover effect for register account */
+.form-box-row .register-account:hover{
+    color: rgb(221, 221, 221);
+    text-decoration: underline;
+}
+
+/* submit button of login */
+.login-submit-button{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 105%;
+    height: 45px;
+    border: 1px;
+    border-radius: 10px;
+    background-color: rgb(160, 129, 244);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* effect when hovering submit button */
+.login-submit-button:hover{
+    background-color: rgb(149, 122, 224);
+    cursor: pointer;
+}

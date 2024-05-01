@@ -2,5 +2,7 @@
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:Week2Workshop" serverId="Tomcat v8.5 Server at localhost (2)"/>
   <module moduleId="org.eclipse.jst.jee.server:MyProject" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:CameraWebsite" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:website" serverId="Tomcat v8.5 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Week3" serverId="Tomcat v8.5 Server at localhost"/>
 </modules>
