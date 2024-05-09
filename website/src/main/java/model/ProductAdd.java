@@ -14,6 +14,7 @@ public class ProductAdd implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	//variable declaration
+	private int productID;
 	private String productName;
 	private int productPrice;
 	private int productStock;
@@ -36,7 +37,27 @@ public class ProductAdd implements Serializable{
 		this.imageUrlFromPart = getImageUrl(imagePart);
 	}
 
+	public ProductAdd(int productID, String productName, int productPrice, int productStock, String productCategory,
+			String productDescription, Part imagePart) {
+		super();
+		this.productID = productID;
+		this.productName = productName;
+		this.productPrice = productPrice;
+		this.productStock = productStock;
+		this.productCategory = productCategory;
+		this.productDescription = productDescription;
+		this.imageUrlFromPart = getImageUrl(imagePart);
+	}
+	
 	//getter and setter methods for all the variables
+	public int getProductID() {
+		return productID;
+	}
+	
+	public void setProductID(int productID) {
+		this.productID = productID;
+	}
+	
 	public String getProductName() {
 		return this.productName;
 	}
@@ -85,8 +106,8 @@ public class ProductAdd implements Serializable{
 		this.imageUrlFromPart = getImageUrl(part);
 	}
 	
-	public void setImageUrlFromDB(String imageUrl) {
-		this.imageUrlFromPart = imageUrl;
+	public void setImageUrlFromDB(String imageUrlFromPart) {
+		this.imageUrlFromPart = imageUrlFromPart;
 	}
 	
 	//methods to get images

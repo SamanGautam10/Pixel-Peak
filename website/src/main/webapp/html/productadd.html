@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"
+	href="../stylesheets/register.css" />
+</head>
+<body>
+	<div class="container">
+		<h1>Registration Form</h1>
+			<div class="row">
+		<form action="../ProductAddServlet" method="post">
+				<div class="col">
+					<label for="firstName">First Name:</label> <input type="text"
+						id="firstName" name="productName" required>
+				</div>
+				<div class="col">
+					<label for="lastName">Last Name:</label> <input type="text"
+						id="lastName" name="productPrice" required>
+				</div>
+				<div class="col">
+					<label for="username">Username:</label> <input type="text"
+						id="username" name="productStock" required>
+				</div>
+				<div class="col">
+					<label for="email">Email:</label> <input type="text" id="email"
+						name="productCategory" required>
+				</div>
+			<div class="row">
+				<div class="col">
+					<label for="phoneNumber">Phone Number:</label> <input type="tel"
+						id="productDescription" name="productDescription" required>
+				</div>
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+		</div>
+	</div>
+</body>
+</html>

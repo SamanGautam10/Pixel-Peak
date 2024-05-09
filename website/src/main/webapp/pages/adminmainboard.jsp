@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,33 +14,19 @@
 <link rel="stylesheet" href="../stylesheets/dashboard.css">
 <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
 
+<sql:setDataSource var="dbConnection" driver="com.mysql.cj.jdbc.Driver" 
+	url="jdbc:mysql://localhost:3306/pixelpeak" user="root" password=""/>
+
+<sql:query var="userCount" dataSource="${dbConnection}">
+	SELECT COUNT(*) AS count FROM register
+</sql:query>
+
+<c:set var="count" value="${userCount.rows[0].count}" />
+
 <body>
 <!-- main navigation bar -->
-    <div class="sidebar">
-        <a href="../pages/adminmainboard.jsp"><img src="../resources/icon.png" alt="" width="200" class="nav-img"></a>
-        <ul>
-            <li><a href="../pages/adminmainboard.jsp">Dashboard</a></li>
-            <li><a href="../pages/productmanagement.jsp">Products Management</a></li>
-            <li><a href="../pages/orderlist.jsp">Order List</a></li>
-            <li><a href="../pages/user.jsp">User Management</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-    </div>
+    <jsp:include page="adminheader.jsp" />
 
-    <!-- Search bar and message -->
-    <nav class="search">
-        <div class="search-bar-column">
-            <div class="search-row">
-                <input type="text" name="search-bar" placeholder="Search" class="searchbar">
-            </div>
-            <div class="profile">
-                <a href="#">
-                    <img src="../resources/dashboard-icon.svg" alt="" class="profile-img"> 
-                    <span class="profile-text">Saman Gautam</span>
-                </a>
-            </div>
-        </div>
-    </nav>
 
     <!-- Stats of the company -->
     <div class="welcome-back">
@@ -48,21 +38,21 @@
         <div class="column-card">
             <div class="card">
                 <img src="../resources/growth.png" alt="" >
-                <p>Today Sale: </p>
+                <p>No. of Sales: </p>
             </div>
         </div> 
 
         <div class="column-card">
             <div class="card">
                 <img src="../resources/growth.png" alt="" >
-                <p>Overall Sales: </p>
+                <p>Overall Profit: </p>
             </div>
         </div>
 
         <div class="column-card">
             <div class="card">
                 <img src="../resources/user-icon.png" alt="" >
-                <p>Total Users: </p>
+                <p>Total Users: ${count}</p>
             </div>
         </div>
 
@@ -73,12 +63,5 @@
             </div>
         </div>
     </div>
-
-    <!-- message from user through contact us -->
-        <div class="card-row">
-            <div class="message-user">
-                Hello
-            </div>
-        </div>
 </body>
 </html>

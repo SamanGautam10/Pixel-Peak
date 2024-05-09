@@ -64,10 +64,7 @@ public class ProductAddServlet extends HttpServlet {
 			response.sendRedirect(request.getContextPath() + "/pages/productmanagement.jsp");
 		}
 		else {
-			PrintWriter out = response.getWriter();
-	        out.println("<html><body>");
-	        out.println("<h3>Error: Milya xaina</h3>");
-	        out.println("</body></html>");
+			response.sendRedirect(request.getContextPath() + "/pages/adminerror.jsp");
 		}
 	}
 		catch(Exception ex) {

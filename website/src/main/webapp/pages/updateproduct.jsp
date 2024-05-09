@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
     
 <!DOCTYPE html>
 <html>
@@ -15,38 +16,15 @@
 
 <body>
 <!-- main navigation bar -->
-    <div class="sidebar">
-        <a href="adminmainboard.html"><img src="../resources/icon.png" alt="" width="200" class="nav-img"></a>
-        <ul>
-            <li><a href="../pages/adminmainboard.jsp">Dashboard</a></li>
-            <li><a href="../pages/productmanagement.jsp">Products Management</a></li>
-            <li><a href="../pages/orderlist.jsp">Order List</a></li>
-            <li><a href="#">User Management</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-    </div>
-
-     <!-- Search bar and message -->
-    <nav class="search">
-        <div class="search-bar-column">
-            <div class="search-row">
-                <input type="text" name="search-bar" placeholder="Search" class="searchbar">
-            </div>
-            <div class="profile">
-                <a href="#">
-                    <img src="../resources/dashboard-icon.svg" alt="" class="profile-img"> 
-                    <span class="profile-text">Saman Gautam</span>
-                </a>
-            </div>
-        </div>
-    </nav>	
+   <jsp:include page="adminheader.jsp" />
 
     <!-- Form to add product -->
     <div class="form-row">
-        <form action="../UpdateProduct" method="post" enctype="multipart/form-data">
+        <form action="../UpdateProductServlet" method="post">
         		<div class="form-column">
 	                <label for="Product ID">Product ID</label><br>
 	                <input type="hidden" name="productID" value="${param.productID}" />
+	                <span>${param.productID}</span>
             	</div>
              
 				<div class="form-column">

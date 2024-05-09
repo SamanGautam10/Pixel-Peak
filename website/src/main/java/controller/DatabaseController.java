@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import model.ProductAdd;
+import model.model;
 import util.StringUtils;
 
 public class DatabaseController {
@@ -97,101 +98,59 @@ public class DatabaseController {
 	    }
 	}
 
+	
+	 public static boolean updateProduct(String productID, String productName, String productPrice, String productStock, String productCategory, String productDescription) {
+	        try (Connection conn = DriverManager.getConnection(StringUtils.LOCALHOST_URL, StringUtils.LOCALHOST_USER, StringUtils.LOCALHOST_PASSWORD)) {
+	            String query = StringUtils.UPDATE_PRODUCT;
+	            try (PreparedStatement pstmt = conn.prepareStatement(query)) {
+	                pstmt.setString(1, productName);
+	                pstmt.setString(2, productPrice);
+	                pstmt.setString(3, productStock);
+	                pstmt.setString(4, productCategory);
+	                pstmt.setString(5, productDescription);
+	                pstmt.setString(6, productID);
 
+	                int rowsUpdated = pstmt.executeUpdate();
+	                return rowsUpdated > 0;
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	            return false;
+	        }
+	    }
+	
 	/**
 	 * Aagaman Ko Part
 	 */
-	public String getEncryptedPassword(String username) {
-        String encryptedPassword = null;
-        try (Connection connection = getConnection()) {
-            String query = "SELECT password FROM users WHERE username = ?";
-            PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1, username);
-            ResultSet resultSet = statement.executeQuery();
-            if (resultSet.next()) {
-                encryptedPassword = resultSet.getString("password");
-            }
-        } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return encryptedPassword;
-    }
-
-    public int  addData(model model) {
-        try (Connection con = getConnection()) {
-            PreparedStatement st = con.prepareStatement(StringUtils.Insert_User);
-           st.setString(1,model.getUserName());
-           st.setString(2, model.getEmail());
-           st .setString(3,model.getGender());
-           st.setString(4,model.getPhone());
-           st.setString(5,model.getPassword());
-           int result=st.executeUpdate(); 
-           return result>0?1:0;
-        } catch (SQLException | ClassNotFoundException ex) {
-            ex.printStackTrace(); // Handle the exception appropriately
-            return -1;
-        }
-    }
-	public int getLoginInfo(login login) {
-
-	    // Try-catch block to handle potential SQL or ClassNotFound exceptions
-	    try {
-	        // Prepare a statement using the predefined query for login check
-	        PreparedStatement st = getConnection().prepareStatement(StringUtils.Login_check);
-
-	        // Set the username in the first parameter of the prepared statement
-	        st.setString(1, login.getUserName());
-	        st.setString(2, login.getPassword());
-
-	        // Execute the query and store the result set
-	        ResultSet result = st.executeQuery();
-
-	        // Check if there's a record returned from the query
-	        if (result.next()) {
-	            // Get the username from the database
-	            String userDb = result.getString(StringUtils.username);
-
-	            // Get the password from the database
-	            String passwordDb = result.getString(StringUtils.password);
-
-	            // Check if the username and password match the credentials from the database
-	            if (userDb.equals(login.getUserName()) 
-	            		&& passwordDb.equals(login.getPassword())) {
-	                // Login successful, return 1
-	                return 1;
-	            } else {
-	                // Username or password mismatch, return 0
-	                return 0;
-	            }
-	        } else {
-	            // Username not found in the database, return -1
-	            return -1;
-	        }
-	    // Catch SQLException and ClassNotFoundException if they occur
-	    } catch (SQLException | ClassNotFoundException ex) {
-	        // Print the stack trace for debugging purposes
-	        ex.printStackTrace();
-	        // Return -2 to indicate an internal error
-	        return -2;
-	    }
+	/**
+	 * This function is used to get all the information from the database
+	 * Using setter method which is in model, we set the value of respective field
+	 * This method is being used to pull all the data from database to be set in user management.
+	 */
+	public ArrayList<model> getAllUserInfo(){
+		try {
+			PreparedStatement st = getConnection().prepareStatement(StringUtils.GET_USER);
+			ResultSet rs = st.executeQuery();
+			
+			ArrayList<model> registerUser = new ArrayList<model>();
+			
+			while(rs.next()) {
+				model register = new model(null, null, null,null);
+				
+				register.setUserName(rs.getString("UserName"));
+				register.setEmail(rs.getString("Email"));
+				register.setGender(rs.getString("Gender"));
+				register.setPhone(rs.getString("Phone"));
+				
+				registerUser.add(register);
+			}
+			
+			return registerUser;
+		} 
+		catch(SQLException | ClassNotFoundException ex) {
+			ex.printStackTrace();
+			return null;
+		}
 	}
 	
-	public Boolean checkEmailIfExists(String email) {
-	    // TODO: Implement logic to check if the provided email address exists in the database
-	    // This method should likely query the database using DBController and return true if the email exists, false otherwise.
-	    return false;
-	}
-
-	public Boolean checkNumberIfExists(String number) {
-	    // TODO: Implement logic to check if the provided phone number exists in the database
-	    // This method should likely query the database using DBController and return true if the phone number exists, false otherwise.
-	    return false;
-	}
-
-	public Boolean checkUsernameIfExists(String username) {
-	    // TODO: Implement logic to check if the provided username exists in the database
-	    // This method should likely query the database using DBController and return true if the username exists, false otherwise.
-	    return false;
-	}
-
 }

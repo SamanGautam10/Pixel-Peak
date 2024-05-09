@@ -67,19 +67,19 @@
                 <p style="color: brown; font-weight: 400px; font-size: 20px; border-bottom: 2px solid red; width: 120px">Registration :</p>
                 <br>
                 <label >User Name:</label>
-                <input type="text" id="username" name="UserName" required>
+                <input type="text" id="UserName" name="UserName" required>
                 <br> <br>
                 <label>Email:</label>
-                <input type="text" id="email" name="Email" required>
+                <input type="text" id="Email" name="Email" required>
                 <br><br>
                 <label >Gender:</label><input type="radio"  value='male' name="Gender" > <label >Male</label>&nbsp;&nbsp;
                 <input type="radio" value='female' name='Gender' ><label >Female</label>
                 <br><br>
                 <label >Phone:</label>
-                <input type="text" id="email" name="Phone" required>
+                <input type="text" id="Phone" name="Phone" required>
                 <br><br>
                 <label >Password</label>
-                <input type="password" id="email" name="Password" required>
+                <input type="password" id="Password" name="Password" required>
                 <br><br>
                 <input type="submit" value="Submit">
                 <p>Already a Memeber ? &nbsp;<a href="login.jsp">Login Here</a></p>
