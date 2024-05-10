@@ -1,5 +1,5 @@
 
-.0<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,15 +7,7 @@
     <title>Document</title>
 </head>
 <style>
-    * {
-        margin : 0;
-        padding: 0;
-        font-family: sans-serif;
-        box-sizing: border-box;
-    }
-    body{
-        background-color: black;
-    }
+
     .navbar{
     width: 100%;
     padding: 30px;
@@ -35,7 +27,6 @@
     margin: 20px;
 }
 .navbar ul li a{
-    
     text-decoration: none;
     text-transform: uppercase;
     color: white;
@@ -51,14 +42,13 @@
 }
     </style>
 <body>
-    
     <div class="navbar">
         <img class="logo" src="../images/icon.png">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="main.jsp">Home</a></li>
+            <li><a href="product.jsp">Products</a></li>
+            <li><a href="aboutus.jsp">About Us</a></li>
+            <li><a href="profile.jsp">Profile</a></li>
         </ul>
     </div>
 </body>

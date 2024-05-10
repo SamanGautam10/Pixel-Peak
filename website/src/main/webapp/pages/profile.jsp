@@ -123,10 +123,10 @@ left: 500px;
      <div class="link">
         <ul>
             <br>
-    <a href="">Home</a>
-    <a href="">Product</a>
-    <a href="">AboutUs</a>
-   <Button type="submit">Logout</Button>
+    <a href="main.jsp">Home</a>
+    <a href="product.jsp">Product</a>
+    <a href="aboutus.jsp">AboutUs</a>
+   <a href="../LogoutServlet">Logout</button></a>
         </ul>
      </div>
     </div>

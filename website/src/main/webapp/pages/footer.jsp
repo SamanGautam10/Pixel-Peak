@@ -6,15 +6,8 @@
     <title>Document</title>
 </head>
  <style>
-        * {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        box-sizing: border-box;
-}
 .foot{
     font-family:Verdana, Geneva, Tahoma, sans-serif ;
-    background-color: rgb(170, 168, 168);
     color: #fff;
     height: 300px;
     border: 2px solid black;
@@ -32,7 +25,9 @@
     justify-content: space-between;
     margin-top: 8px;
 }
+
 .one ,.two,.three{
+background-color: white;
     text-align: center;
     display: inline-block;
     width: 30%;
@@ -112,17 +107,16 @@ footer{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
     </style>
-<body>
-   
+<body> 
     <footer>
         <div class="foot">
             <div class="container">
                 <div class="one">
                     <img src="../images/pixelspeak-high-resolution-logo-transparent.png" alt="">
                     <ul>
-                        <li><a href="">Home</a></li>
+                        <li><a href="main.jsp">Home</a></li>
                         <li><a href="">Product</a> </li>
-                        <li><a href="">About Us</a></li>
+                        <li><a href="AboutUs.jsp">About Us</a></li>
                         <li><a href="">Profile</a></li>
                      </ul>
                      <p>Copyright &copy; 2024 | Pixel Developers | All rights reserved.</p>

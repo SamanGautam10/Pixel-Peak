@@ -42,7 +42,11 @@
 	SELECT productID,productName,productPrice,productStock,productCategory,productDescription,imagePart FROM product	
 </sql:query>
 
-
+<style>
+body{
+height: auto;
+}
+</style>
 <body>
 <!-- main navigation bar -->
     <jsp:include page="adminheader.jsp" />
